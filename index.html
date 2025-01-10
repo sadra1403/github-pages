@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Sadra Meybodi's Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .language-toggle {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .language-toggle button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .language-toggle button:hover {
+            background-color: #555;
+        }
+        .resume {
+            margin-top: 20px;
+        }
+        .resume .section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Mohammad Sadra Meybodi's Resume</h1>
+</header>
+
+<div class="container">
+    <div class="language-toggle">
+        <button onclick="setLanguage('en')">English</button>
+        <button onclick="setLanguage('fa')">فارسی</button>
+    </div>
+
+    <div class="resume">
+        <div class="section" id="name">
+            <h2>Mohammad Sadra Meybodi</h2>
+        </div>
+        <div class="section" id="email">
+            <p>Email: <a href="mailto:00sadra12@gmail.com">00sadra12@gmail.com</a></p>
+        </div>
+        <div class="section" id="summary">
+            <h3>Summary</h3>
+            <p id="summary-text">A 16-year-old student with a passion for Artificial Intelligence and Machine Learning. Skilled in Python and machine learning algorithms. Interested in learning more about Deep Learning and solving real-world problems using advanced technologies.</p>
+        </div>
+        <div class="section" id="skills">
+            <h3>Skills</h3>
+            <ul>
+                <li>Programming Languages: Python</li>
+                <li>Libraries: Scikit-learn, Pandas, NumPy, Matplotlib</li>
+                <li>Machine Learning: Regression, Classification, Clustering, KNN, Decision Trees</li>
+                <li>Tools: Jupyter Notebooks, Git, GitHub</li>
+                <li>Analytical Skills: Data Preprocessing, Model Evaluation (Accuracy, F1-Score)</li>
+            </ul>
+        </div>
+        <div class="section" id="projects">
+            <h3>Projects</h3>
+            <ul>
+                <li><strong>House Price Prediction:</strong> Linear regression model to predict house prices based on features like area, number of rooms, and location.</li>
+                <li><strong>Image Classification (Dog vs. Cat):</strong> Machine learning model to classify images as dogs or cats.</li>
+                <li><strong>Sentiment Analysis of Tweets:</strong> Analyzing Twitter data to classify sentiment as positive or negative using NLP algorithms.</li>
+            </ul>
+        </div>
+        <div class="section" id="goals">
+            <h3>Goals</h3>
+            <p id="goals-text">My goal is to further develop my skills in Deep Learning and Artificial Intelligence, and I am looking for learning opportunities and practical experience in this field.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function setLanguage(lang) {
+        if (lang === 'fa') {
+            document.getElementById("name").innerHTML = "<h2>محمد صدرا میبدی</h2>";
+            document.getElementById("email").innerHTML = "<p>Email: <a href='mailto:00sadra12@gmail.com'>00sadra12@gmail.com</a></p>";
+            document.getElementById("summary-text").innerHTML = "دانش‌آموز 16 ساله با علاقه‌مندی به هوش مصنوعی و ماشین لرنینگ. تسلط بر پایتون و الگوریتم‌های ماشین لرنینگ. علاقه‌مند به یادگیری بیشتر در زمینه دیپ لرنینگ و حل مسائل دنیای واقعی با استفاده از تکنولوژی‌های نوین.";
+            document.getElementById("goals-text").innerHTML = "هدف من توسعه مهارت‌هایم در زمینه دیپ لرنینگ و هوش مصنوعی است و به دنبال فرصت‌های یادگیری و تجربه عملی بیشتر در این زمینه هستم.";
+            document.querySelector('h1').innerText = "رزومه محمد صدرا میبدی";
+        } else {
+            document.getElementById("name").innerHTML = "<h2>Mohammad Sadra Meybodi</h2>";
+            document.getElementById("email").innerHTML = "<p>Email: <a href='mailto:00sadra12@gmail.com'>00sadra12@gmail.com</a></p>";
+            document.getElementById("summary-text").innerHTML = "A 16-year-old student with a passion for Artificial Intelligence and Machine Learning. Skilled in Python and machine learning algorithms. Interested in learning more about Deep Learning and solving real-world problems using advanced technologies.";
+            document.getElementById("goals-text").innerHTML = "My goal is to further develop my skills in Deep Learning and Artificial Intelligence, and I am looking for learning opportunities and practical experience in this field.";
+            document.querySelector('h1').innerText = "Mohammad Sadra Meybodi's Resume";
+        }
+    }
+</script>
+
+</body>
+</html>
